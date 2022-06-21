@@ -1,38 +1,236 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/*?__________________________________________________Sign Up page_________________________________________________________________________*/
+
 .App {
   text-align: center;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*!_______________________________________________Sign Up and its child_____________________________________________________________________*/
+
+#container-signup {
+  background-size: 100%;
+  height: 100vh;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/242/304/848/new-york-city-building-cityscape-wallpaper-e3223651ba18079112fd5e2efc8df22f.jpg");
+  background-size: cover;
+  border: 2px solid red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#box {
+  background-color: rgba(238, 238, 238, 0.762);
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/*!_____________________________________________Sign Up box______________________________________________________________*/
+
+#signUp-box {
+  background-color: #6e72fc;
+  background-image: linear-gradient(175deg, #6e72fc 0%, #ad1deb 74%);
+  opacity: 0.8;
+  width: 25%;
+  height: 67vh;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  filter: unset;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
+
+#logo-parent-box {
+  position: relative;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo-box {
+  background-color: white;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
+}
+/*!__________________________________________________Sign Up text__________________________________________________*/
+#signUp-text{
+  color: black;
+}
+
+#img-logo {
+  position: relative;
+  top: 15px;
+  width: 115px;
+}
+/*!__________________________________________________Form & Input Fields___________________________________________*/
+#form-tag{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 30px;
+position: relative;
+top: 35px;
+}
+
+.input-field{
+  background: transparent;
+  outline: none;
+  border-top: none;
+  border-right:none;
+  border-left: none;
+  border-color: azure;
+  width: 60%;
+  height: 25px;
+  outline: none;
+}
+
+::placeholder{
+  color: rgb(220, 220, 220);
+}
+/*!_______________________________________________________________Button_________________________________________________  */
+#btn{
+  height: 40px;
+  width: 105px;
+  border: none;
+  border-radius: 35px;
+  background-color: azure;
+}
+
+#btn:hover{
+  cursor: pointer;
+  background-color: transparent;
+  transition: .5s;
+  border: 1px solid azure;
+}
+
+#btn:active{
+  height: 37px;
+  width: 100px;
+  background-color: transparent;
+}
+
+/*?_________________________________________________________________Sign In___________________________________________________________________*/
+
+
+/*!_______________________________________________Login and its child_____________________________________________________________________*/
+
+#container-login {
+  background-size: 100%;
+  height: 100vh;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/958/67/630/silhouette-photography-of-eiffel-tower-tour-eiffel-tour-eiffel-wallpaper-87141256ff194aa154d807ba090410e8.jpg");
+  background-size: cover;
+  border: 2px solid red;
+}
+
+#login-box {
+  background-color: rgba(0, 0, 0, 0.721);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*!_____________________________________________Login box______________________________________________________________*/
+
+#signIn-box {
+  background-color: #6e72fc;
+  background-image: linear-gradient(175deg, #6e72fc 0%, #ad1deb 74%);
+  opacity: 0.8;
+  width: 25%;
+  height: 53vh;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  filter: unset;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+/*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
+
+#login_logo-parent-box{
+  position: relative;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+#login_logo-box {
+  background-color: white;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
+}
+/*!__________________________________________________Login text__________________________________________________*/
+#login-text{
+  color: black;
+}
+
+#img-logo_login {
+  position: relative;
+  top: 15px;
+  width: 115px;
+}
+/*!__________________________________________________Form & Input Fields for login_________________________________________________________________*/
+#login-form-tag{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 30px;
+position: relative;
+top: 35px;
+}
+
+.login-input-field{
+  background: transparent;
+  outline: none;
+  border-top: none;
+  border-right:none;
+  border-left: none;
+  border-color: azure;
+  width: 60%;
+  height: 25px;
+  outline: none;
+}
+
+::placeholder{
+  color: rgb(220, 220, 220);
+}
+
+#forget-password{
+  color: azure;
+}
+#forget-password:hover{
+  cursor: pointer;
+}
+/*!_______________________________________________________________Button for login_________________________________________________  */
+#login-btn{
+  height: 40px;
+  width: 105px;
+  border: none;
+  border-radius: 35px;
+  background-color: azure;
+}
+
+#login-btn:hover{
+  cursor: pointer;
+  background-color: transparent;
+  transition: .5s;
+  border: 1px solid azure;
+}
+
+#login-btn:active{
+  height: 37px;
+  width: 100px;
+  background-color: transparent;
 }
