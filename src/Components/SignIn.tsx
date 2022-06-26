@@ -1,5 +1,6 @@
 import React from "react";
 import hill from "../icons/hill.png"
+import { Link } from "react-router-dom";
 interface ISignIn{
 
 }
@@ -25,7 +26,7 @@ const SignIn:React.FunctionComponent<ISignIn> = (props)=>{
 
                     <input type="password" placeholder="Password" className="login-input-field" />
 
-                       <span id="forget-password"> Forget Password? </span>
+                 <Link id="forgotpass-sign" to="/forgot">      <span id="forget-password"> Forget Password? </span>  </Link>
 
                     <button id="login-btn">
                         Login

@@ -20,7 +20,6 @@ body {
   height: 100vh;
   background-image: url("https://r4.wallpaperflare.com/wallpaper/242/304/848/new-york-city-building-cityscape-wallpaper-e3223651ba18079112fd5e2efc8df22f.jpg");
   background-size: cover;
-  border: 2px solid red;
 }
 
 #box {
@@ -39,11 +38,13 @@ body {
   background-image: linear-gradient(175deg, #6e72fc 0%, #ad1deb 74%);
   opacity: 0.8;
   width: 25%;
-  height: 67vh;
+  height: 73vh;
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
   filter: unset;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 /*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
@@ -62,7 +63,7 @@ body {
   height: 145px;
 }
 /*!__________________________________________________Sign Up text__________________________________________________*/
-#signUp-text{
+#signUp-text {
   color: black;
 }
 
@@ -70,35 +71,45 @@ body {
   position: relative;
   top: 15px;
   width: 115px;
+  filter: saturate(3);
 }
 /*!__________________________________________________Form & Input Fields___________________________________________*/
-#form-tag{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-gap: 30px;
-position: relative;
-top: 35px;
+#form-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  top: 35px;
 }
 
-.input-field{
+.input-field {
   background: transparent;
   outline: none;
   border-top: none;
-  border-right:none;
+  border-right: none;
   border-left: none;
   border-color: azure;
   width: 60%;
   height: 25px;
   outline: none;
+  font-size: x-large;
 }
 
-::placeholder{
+/*______________________________________________________Number input field________________________________________________ */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::placeholder {
   color: rgb(220, 220, 220);
 }
 /*!_______________________________________________________________Button_________________________________________________  */
-#btn{
+#btn {
   height: 40px;
   width: 105px;
   border: none;
@@ -106,21 +117,20 @@ top: 35px;
   background-color: azure;
 }
 
-#btn:hover{
+#btn:hover {
   cursor: pointer;
   background-color: transparent;
-  transition: .5s;
+  transition: 0.5s;
   border: 1px solid azure;
 }
 
-#btn:active{
+#btn:active {
   height: 37px;
   width: 100px;
   background-color: transparent;
 }
 
 /*?_________________________________________________________________Sign In___________________________________________________________________*/
-
 
 /*!_______________________________________________Login and its child_____________________________________________________________________*/
 
@@ -129,7 +139,6 @@ top: 35px;
   height: 100vh;
   background-image: url("https://r4.wallpaperflare.com/wallpaper/958/67/630/silhouette-photography-of-eiffel-tower-tour-eiffel-tour-eiffel-wallpaper-87141256ff194aa154d807ba090410e8.jpg");
   background-size: cover;
-  border: 2px solid red;
 }
 
 #login-box {
@@ -148,16 +157,15 @@ top: 35px;
   background-image: linear-gradient(175deg, #6e72fc 0%, #ad1deb 74%);
   opacity: 0.8;
   width: 25%;
-  height: 53vh;
+  height: 60vh;
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
   filter: unset;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 /*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
 
-#login_logo-parent-box{
+#login_logo-parent-box {
   position: relative;
   top: 15px;
   display: flex;
@@ -171,50 +179,64 @@ top: 35px;
   height: 145px;
 }
 /*!__________________________________________________Login text__________________________________________________*/
-#login-text{
+#login-text {
   color: black;
 }
 
 #img-logo_login {
   position: relative;
   top: 15px;
-  width: 115px;
+  width: 120px;
+  filter: saturate(3);
 }
 /*!__________________________________________________Form & Input Fields for login_________________________________________________________________*/
-#login-form-tag{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-gap: 30px;
-position: relative;
-top: 35px;
+#login-form-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  top: 35px;
 }
 
-.login-input-field{
+.login-input-field {
   background: transparent;
   outline: none;
   border-top: none;
-  border-right:none;
+  border-right: none;
   border-left: none;
   border-color: azure;
   width: 60%;
   height: 25px;
   outline: none;
+  font-size: x-large;
 }
 
-::placeholder{
+::placeholder {
   color: rgb(220, 220, 220);
 }
 
-#forget-password{
+#forget-password {
   color: azure;
 }
-#forget-password:hover{
-  cursor: pointer;
+
+#forget-password:hover {
+  text-decoration: underline;
+  color: azure;
 }
+
+#forget-password:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#forgotpass-sign{
+  text-decoration: none;
+}
+
 /*!_______________________________________________________________Button for login_________________________________________________  */
-#login-btn{
+#login-btn {
   height: 40px;
   width: 105px;
   border: none;
@@ -222,15 +244,178 @@ top: 35px;
   background-color: azure;
 }
 
-#login-btn:hover{
+#login-btn:hover {
   cursor: pointer;
   background-color: transparent;
-  transition: .5s;
+  transition: 0.5s;
   border: 1px solid azure;
 }
 
-#login-btn:active{
+#login-btn:active {
   height: 37px;
   width: 100px;
   background-color: transparent;
 }
+
+/*?_______________________________________________________Navbar__________________________________________________________________*/
+
+.navbar {
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.566);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+}
+
+.navbar li {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 22px 22px;
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  top: 0px;
+  margin-right: 35px;
+}
+
+.navbar li:hover {
+  cursor: pointer;
+  background: #ddd;
+  color: black;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  cursor: pointer;
+  background-color: #111;
+}
+
+/*?_________________________________________________________Forget Password________________________________________________*/
+
+#forgot-pass-container {
+  height: 100vh;
+  background-color: #f907fc;
+  background-image: linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
+}
+
+#forgot-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*!_____________________________________________Forgot-Pass box______________________________________________________________*/
+
+#forgot-pass-box {
+  opacity: 0.8;
+  width: 25%;
+  height: 60vh;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.413);
+  filter: unset;
+
+}
+
+/*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
+
+#forgot_logo-parent-box {
+  position: relative;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+#forgot_logo-box {
+  background-color: white;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
+}
+/*!__________________________________________________forgot text__________________________________________________*/
+#forgot-text {
+  color: black;
+}
+
+#img-logo_forgot {
+  position: relative;
+  top: 15px;
+  width: 105px;
+  filter: contrast(200%);
+}
+/*!__________________________________________________Form & Input Fields for login_________________________________________________________________*/
+#forgot-form-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  top: 35px;
+}
+
+.forgot-input-field {
+  background-color: transparent;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: azure;
+  width: 70%;
+  height: 45px;
+  outline: none;
+  font-size: large;
+  color: azure;
+}
+
+.forgot-input-field:hover {
+  background: rgba(255, 255, 255, 0.246);
+}
+
+::placeholder {
+  font-size: large;
+  color: rgb(220, 220, 220);
+}
+
+/*!_______________________________________________________________Button for verify_________________________________________________  */
+#forgot-btn {
+  height: 50px;
+  width: 135px;
+  border: none;
+  border-radius: 35px;
+  background-color: azure;
+  font-size: larger;
+}
+
+#forgot-btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  border: 1px solid azure;
+}
+
+#forget-back_to_login {
+  color: azure;
+}
+
+#Link-forgot{
+  text-decoration: none;
+}
+
+#forget-back_to_login:hover {
+  cursor: pointer;
+  text-decoration:underline;
+}
+
+#instructions {
+  position: relative;
+  left: 110px;
+  flex-direction: column;
+  text-align: justify;
+  color: #05d6d9;
+}
+
