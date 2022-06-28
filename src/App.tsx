@@ -3,7 +3,10 @@ import SignUp from './Components/SignUp';
 import Navbar from './Components/Navbar';
 import SignIn from './Components/SignIn';
 import ForgetPassword from './Components/forgetPassword';
+import MailSent from './Reactions/MailSent';
+import EnterNewPassword from './Components/enterNewPassword';
 import { Route, Switch } from "react-router-dom";
+import SignInSuccess from './Reactions/sucess';
 import './App.css';
 
 
@@ -25,6 +28,17 @@ function App() {
           <Route path="/forgot">
            <ForgetPassword/>
           </Route>
+          <Route path="/mailSent">
+           <MailSent/>
+          </Route>
+          <Route path="/signSuccess">
+           <SignInSuccess/>
+          </Route>
+          <Route path="/reset-password/:userid/:token">
+           <EnterNewPassword/>
+          </Route>
+
+
 </Switch>
 
   

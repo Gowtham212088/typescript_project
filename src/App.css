@@ -231,7 +231,7 @@ input::-webkit-inner-spin-button {
   text-decoration: underline;
 }
 
-#forgotpass-sign{
+#forgotpass-sign {
   text-decoration: none;
 }
 
@@ -258,6 +258,13 @@ input::-webkit-inner-spin-button {
 }
 
 /*?_______________________________________________________Navbar__________________________________________________________________*/
+
+#nav-logo {
+  position: relative;
+  top: 2.5px;
+  right: 695px;
+  width: 60px;
+}
 
 .navbar {
   overflow: hidden;
@@ -314,11 +321,10 @@ li a:hover {
 #forgot-pass-box {
   opacity: 0.8;
   width: 25%;
-  height: 60vh;
+  height: 65vh;
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.413);
   filter: unset;
-
 }
 
 /*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
@@ -384,7 +390,7 @@ li a:hover {
 /*!_______________________________________________________________Button for verify_________________________________________________  */
 #forgot-btn {
   height: 50px;
-  width: 135px;
+  width: 145px;
   border: none;
   border-radius: 35px;
   background-color: azure;
@@ -402,20 +408,157 @@ li a:hover {
   color: azure;
 }
 
-#Link-forgot{
+#Link-forgot {
   text-decoration: none;
 }
 
-#forget-back_to_login:hover {
-  cursor: pointer;
-  text-decoration:underline;
+/*?______________________________________________________ENTER NEW PASSWORD___________________________________________ */
+
+ /*!_______________________________________________Login and its child_____________________________________________________________________*/
+
+#new_password-container-login {
+  background-size: 100%;
+  height: 100vh;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/958/67/630/silhouette-photography-of-eiffel-tower-tour-eiffel-tour-eiffel-wallpaper-87141256ff194aa154d807ba090410e8.jpg");
+  background-size: cover;
 }
 
-#instructions {
+#new_password-login-box {
+  background-color: rgba(0, 0, 0, 0.721);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*!_____________________________________________Login box______________________________________________________________*/
+
+#new_password-signIn-box {
+  background-color: #6e72fc;
+  background-image: linear-gradient(175deg, #6e72fc 0%, #ad1deb 74%);
+  opacity: 0.8;
+  width: 25%;
+  height: 53vh;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  filter: unset;
+}
+
+/*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
+
+#new_password-login_logo-parent-box {
+  position: relative;
+  top: 15px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+#new_password-login_logo-box {
+  background-color: white;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
+}
+/*!__________________________________________________Login text__________________________________________________*/
+#new_password-login-text {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+#new_password-img-logo_login {
+  position: relative;
+  top: 15px;
+  left: 20px;
+  width: 115px;
+  filter: saturate(3);
+}
+/*!__________________________________________________Form & Input Fields for login_________________________________________________________________*/
+#new_password-login-form-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  top: 35px;
+}
+
+.new_password-login-input-field {
+  background: transparent;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: azure;
+  width: 60%;
+  height: 25px;
+  outline: none;
+}
+
+::placeholder {
+  color: rgb(220, 220, 220);
+}
+
+
+/*!_______________________________________________________________Button for login_________________________________________________  */
+#new_password-login-btn {
+  height: 40px;
+  width: 190px;
+  border: none;
+  border-radius: 10px;
+  background-color: azure;
+}
+
+#new_password-login-btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  border: 1px solid azure;
+  
+}
+
+#new_password-login-btn:active {
+  height: 40px;
+  width: 190px;
+  background-color: transparent;
+}
+
+/*?____________________________________________________________________________________________________________________ */
+#new_password-forget-back_to_login:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#new_password-instructions {
   position: relative;
   left: 110px;
   flex-direction: column;
   text-align: justify;
   color: #05d6d9;
+}
+
+/*?_______________________________________________Mail sent message image____________________________________________________________*/
+
+#mail-sent-message {
+  background-size: 75%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+#mail-sent-img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+/*?_______________________________________________SignIn success image___________________________________________________________________________ */
+
+#signin-success{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 

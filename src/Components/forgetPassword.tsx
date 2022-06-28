@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import forgot from "../icons/forgot.png"
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import MailSent from "../Reactions/MailSent"
 interface IForgetPassword {
 
 }
@@ -15,6 +17,7 @@ const ForgetPassword: React.FunctionComponent<IForgetPassword> = () => {
 
   const [email, setEmail] = useState<string>("");
 
+  const history = useHistory()
 
 const handleChange = (e:any)=>{
  e.preventDefault()
@@ -45,6 +48,7 @@ const handleChange = (e:any)=>{
 
             <button 
             onClick={()=>{
+             
               const signUpData = {
                 userName: userName,
                 email: email
@@ -56,7 +60,7 @@ const handleChange = (e:any)=>{
                   body: JSON.stringify(signUpData),
                   headers: { "content-type": "application/json" },
                 }
-              );
+              ).then(()=> history.push("/mailSent"))
             }}
             type="submit"
 

@@ -13,6 +13,9 @@ const SignUp: React.FunctionComponent<ISignUp> = (props) => {
  const [contact,setContact]=useState<string>("")
  const [password,setPassword] = useState<string>("")
 
+ const handleSubmit = (e:any) =>{
+    e.preventDefault()
+ }
     return (
         <div id="container-signup">
             <div id="box">
@@ -22,12 +25,11 @@ const SignUp: React.FunctionComponent<ISignUp> = (props) => {
 
                     <div id="logo-parent-box">
                         <div id="logo-box"> <img src={hill} id="img-logo" /> </div>
-
                     </div>
 
                     <div id="signUp-text">  <h1> Sign Up </h1> </div>
 
-                    <form id="form-tag">
+                    <form onSubmit={handleSubmit} id="form-tag">
 
                         <input type="text" onChange={(event)=>setName(event.target.value)} placeholder="First name" className="input-field" />
 
