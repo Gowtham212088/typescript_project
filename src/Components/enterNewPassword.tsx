@@ -10,7 +10,8 @@ const EnterNewPassword: React.FunctionComponent<IEnterNewPassword> = (props) => 
         e.preventDefault()
     }
 
-    //   const {userid} = useParams()
+      const {userid} = useParams()
+
     const [password, setPassword] = useState<string>("");
 
     const [conformPass, setConformPass] = useState<string>("");
