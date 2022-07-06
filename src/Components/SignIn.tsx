@@ -18,11 +18,19 @@ const SignIn: React.FunctionComponent<ISignIn> = (props) => {
 
     const [password, setPassword] = useState<string>()
 
+    const [name, setName] = useState<any>("")
+
+    const [displays, setDisplay] = useState<any>(false)
+
+    const styles = {
+        display: displays ? "none" : "block"
+    }
+
     return (
         <div id="container-login">
             <div id="login-box">
 
-                <div id="signIn-box">
+                {displays ? <h1 style={{ color: "crimson" }}> {name} </h1> : <div id="signIn-box"  >
 
                     <div id="login_logo-parent-box">
                         <div id="login_logo-box"> <img src={hill} id="img-logo_login" /> </div>
@@ -44,12 +52,19 @@ const SignIn: React.FunctionComponent<ISignIn> = (props) => {
                                     email: email,
                                     password: password
                                 };
-                                fetch("https://6228d2bb9fd6174ca8308614.mockapi.io/movies",
+                                fetch("https://dipar-tcejorp.herokuapp.com/form/signIn",
                                     {
                                         method: "POST",
                                         body: JSON.stringify(loginData),
                                         headers: { "content-type": "application/json" }
-                                    }).then(()=>history.push("/signSuccess"))
+                                    }).then((data) => data.json())
+                                    .then((response) => {
+                                        const resMess = response.message;
+                                        const isAvailable = resMess.includes("Welcome")
+                                        setName(resMess)
+                                        setDisplay(isAvailable)
+                                        console.log(isAvailable);
+                                    })
                             }}
                             id="login-btn">
                             Login
@@ -57,7 +72,7 @@ const SignIn: React.FunctionComponent<ISignIn> = (props) => {
 
                     </form>
 
-                </div>
+                </div>}
 
             </div>
 

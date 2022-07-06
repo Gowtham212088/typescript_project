@@ -5,20 +5,18 @@ interface IEnterNewPassword {
 
 }
 
-const EnterNewPassword: React.FunctionComponent<IEnterNewPassword> = (props) => {
+const EnterNewPassword: React.FunctionComponent= (props) => {
     const handleSubmit = (e: any) => {
         e.preventDefault()
     }
 
-      const {userid} = useParams()
+      const {userid,token}:any = useParams()
 
-    const [password, setPassword] = useState<string>("");
+    const [password, setPassword] = useState("");
 
     const [conformPass, setConformPass] = useState<string>("");
 
-
-
-    return (
+  return (
         <div>
             <div id="new_password-container-login">
                 <div id="new_password-login-box">
@@ -44,8 +42,8 @@ const EnterNewPassword: React.FunctionComponent<IEnterNewPassword> = (props) => 
                                         password: password,
                                         conformPass: conformPass
                                     };
-                                    fetch("", {
-                                        method: "PUT",
+                                    fetch("https://dipar-tcejorp.herokuapp.com/reset-password/:_id/:token", {
+                                        method: "POST",
                                         body: JSON.stringify(newPassword),
                                         headers: { "content-type": "application/json" }
                                     })

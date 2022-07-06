@@ -7,10 +7,6 @@ interface IForgetPassword {
 
 }
 
-
-
-
-
 const ForgetPassword: React.FunctionComponent<IForgetPassword> = () => {
 
   const [userName, setUserName] = useState<string>("");
@@ -54,7 +50,7 @@ const handleChange = (e:any)=>{
                 email: email
               };
               fetch(
-                "https://6228d2bb9fd6174ca8308614.mockapi.io/movies",
+                "https://dipar-tcejorp.herokuapp.com/form/addRandomString",
                 {
                   method: "POST",
                   body: JSON.stringify(signUpData),

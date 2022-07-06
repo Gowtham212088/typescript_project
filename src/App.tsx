@@ -16,33 +16,31 @@ function App() {
 
 
 
- <Navbar/>
+      <Navbar />
 
- <Switch>
-          <Route path="/login">
-            <SignIn/>
-          </Route>
-          <Route path="/signup">
-           <SignUp/>
-          </Route>
-          <Route path="/forgot">
-           <ForgetPassword/>
-          </Route>
-          <Route path="/mailSent">
-           <MailSent/>
-          </Route>
-          <Route path="/signSuccess">
-           <SignInSuccess/>
-          </Route>
-          <Route path="/reset-password/:userid/:token">
-           <EnterNewPassword/>
-          </Route>
+      <Switch>
+        <Route path="/login">
+          <SignIn />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
+        </Route>
+        <Route path="/forgot">
+          <ForgetPassword />
+        </Route>
+        <Route path="/mailSent">
+          <MailSent />
+        </Route>
+        <Route path="/signSuccess">
+          <SignInSuccess />
+        </Route>
+        <Route path="/reset-password/:userid/:token">
+          <EnterNewPassword />
+        </Route>
+      </Switch>
 
 
-</Switch>
 
-  
-    
     </div>
   );
 }
