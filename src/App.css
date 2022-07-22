@@ -5,6 +5,12 @@ body {
   height: 100vh;
 }
 
+@media only screen and (max-width: 1000px) {
+  #box {
+    width: 1000px;
+  }
+}
+
 /*?__________________________________________________Sign Up page_________________________________________________________________________*/
 
 .App {
@@ -13,532 +19,422 @@ body {
   height: 100vh;
 }
 
-/*!_______________________________________________Sign Up and its child_____________________________________________________________________*/
-
-#container-signup {
+#signUp-bg {
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/962/854/477/orb-abstract-3d-abstract-glowing-wallpaper-f8d61da860509cc8303ca1ee8802140a.jpg");
   background-size: 100%;
-  height: 100vh;
-  background-image: url("https://r4.wallpaperflare.com/wallpaper/242/304/848/new-york-city-building-cityscape-wallpaper-e3223651ba18079112fd5e2efc8df22f.jpg");
-  background-size: cover;
-}
-
-#box {
-  background-color: rgba(238, 238, 238, 0.762);
-  width: 100%;
-  height: 100vh;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-/*!_____________________________________________Sign Up box______________________________________________________________*/
-
-#signUp-box {
-  background-color: #6e72fc;
-  background-image: linear-gradient(175deg, #6e72fc 0%, #ad1deb 74%);
-  opacity: 0.8;
-  width: 25%;
-  height: 73vh;
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  filter: unset;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+input {
+  margin-top: 35px;
+  border: none;
 }
 
-/*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
-
-#logo-parent-box {
-  position: relative;
-  top: 15px;
-  display: flex;
-  justify-content: center;
-}
-
-#logo-box {
-  background-color: white;
-  border-radius: 50%;
-  width: 145px;
-  height: 145px;
-}
-/*!__________________________________________________Sign Up text__________________________________________________*/
-#signUp-text {
+h1 {
   color: black;
 }
 
-#img-logo {
-  position: relative;
-  top: 15px;
-  width: 115px;
-  filter: saturate(3);
-}
-/*!__________________________________________________Form & Input Fields___________________________________________*/
-#form-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-  position: relative;
-  top: 35px;
+p {
+  text-align: center;
 }
 
-.input-field {
-  background: transparent;
-  outline: none;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-color: azure;
-  width: 60%;
-  height: 25px;
-  outline: none;
-  font-size: x-large;
+#signUp {
+  background-color: #fce055;
+  background-image: linear-gradient(
+    319deg,
+    #fce055 0%,
+    #256eff 37%,
+    #46237a 100%
+  );
+  border-radius: 15px;
+  text-align: center;
+  padding: 2%;
+  width: 450px;
+  margin: 0 auto;
+  font-family: Arial;
 }
 
-/*______________________________________________________Number input field________________________________________________ */
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-::placeholder {
-  color: rgb(220, 220, 220);
-}
-/*!_______________________________________________________________Button_________________________________________________  */
-#btn {
-  height: 40px;
-  width: 105px;
+#signUp > div > input {
+  margin-bottom: 2%;
+  background: black;
   border: none;
-  border-radius: 35px;
-  background-color: azure;
+  width: 80%;
+  padding: 0.8em;
+  color: white;
+  border-radius: 5px;
 }
 
-#btn:hover {
+#signUp > div {
+  color: white;
+}
+
+.signUp_btn {
+  width: 150px;
+  height: 40px;
+  border: none;
+  margin-top: 3%;
+  background: #03a9f4;
+  color: white;
+  border-radius: 5px;
+}
+
+.signUp_btn:hover {
+  background-color: #ebf928;
+  background-image: linear-gradient(315deg, #ebf928 0%, #d425b5 74%);
   cursor: pointer;
-  background-color: transparent;
-  transition: 0.5s;
-  border: 1px solid azure;
+  font-weight: bold;
 }
 
-#btn:active {
-  height: 37px;
-  width: 100px;
-  background-color: transparent;
+@media only screen and (max-width: 380px) {
+  #signUp {
+    height: 550px;
+    width: 90%;
+  }
+
+  #forget-password {
+    color: rgb(16, 13, 43);
+    font-size: small;
+  }
+
+  #forget-password:hover {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+  }
+
+  #forget-password:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .signUp_btn {
+    position: relative;
+    top: 15px;
+    width: 100px;
+    height: 30px;
+  }
+}
+
+/*// To remove Up & Down arrow buttons  */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
 /*?_________________________________________________________________Sign In___________________________________________________________________*/
 
-/*!_______________________________________________Login and its child_____________________________________________________________________*/
-
-#container-login {
+#login-bg {
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/233/199/824/artwork-abstract-black-3d-3d-abstract-hd-wallpaper-0735828f251360b090c1735936fdf564.jpg");
   background-size: 100%;
-  height: 100vh;
-  background-image: url("https://r4.wallpaperflare.com/wallpaper/958/67/630/silhouette-photography-of-eiffel-tower-tour-eiffel-tour-eiffel-wallpaper-87141256ff194aa154d807ba090410e8.jpg");
-  background-size: cover;
-}
-
-#login-box {
-  background-color: rgba(0, 0, 0, 0.721);
-  width: 100%;
-  height: 100vh;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-/*!_____________________________________________Login box______________________________________________________________*/
-
-#signIn-box {
-  background-color: #6e72fc;
-  background-image: linear-gradient(175deg, #6e72fc 0%, #ad1deb 74%);
-  opacity: 0.8;
-  width: 25%;
-  height: 60vh;
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  filter: unset;
+input {
+  border: none;
 }
 
-/*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
-
-#login_logo-parent-box {
-  position: relative;
-  top: 15px;
-  display: flex;
-  justify-content: center;
-}
-
-#login_logo-box {
-  background-color: white;
-  border-radius: 50%;
-  width: 145px;
-  height: 145px;
-}
-/*!__________________________________________________Login text__________________________________________________*/
-#login-text {
+h1 {
   color: black;
 }
 
-#img-logo_login {
-  position: relative;
-  top: 15px;
-  width: 120px;
-  filter: saturate(3);
-}
-/*!__________________________________________________Form & Input Fields for login_________________________________________________________________*/
-#login-form-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-  position: relative;
-  top: 35px;
+p {
+  text-align: center;
 }
 
-.login-input-field {
-  background: transparent;
-  outline: none;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-color: azure;
-  width: 60%;
-  height: 25px;
-  outline: none;
-  font-size: x-large;
+#login {
+  background-color: #c73e1d;
+  background-image: linear-gradient(315deg, #c73e1d 0%, #a23b72 37%, #2e86ab 100%);
+  border-radius: 15px;
+  text-align: center;
+  padding: 2%;
+  width: 350px;
+  margin: 0 auto;
+  font-family: Arial;
 }
 
-::placeholder {
-  color: rgb(220, 220, 220);
-}
-
-#forget-password {
-  color: azure;
-}
-
-#forget-password:hover {
-  text-decoration: underline;
-  color: azure;
-}
-
-#forget-password:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-#forgotpass-sign {
-  text-decoration: none;
-}
-
-/*!_______________________________________________________________Button for login_________________________________________________  */
-#login-btn {
-  height: 40px;
-  width: 105px;
+#login > div > input {
+  margin-bottom: 2%;
+  background: black;
   border: none;
-  border-radius: 35px;
-  background-color: azure;
+  width: 80%;
+  padding: 0.8em;
+  color: white;
+  border-radius: 5px;
 }
 
-#login-btn:hover {
+#login > div {
+  color: white;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  border: none;
+  margin-top: 3%;
+  background: #03a9f4;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #42378f;
+  background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
   cursor: pointer;
-  background-color: transparent;
-  transition: 0.5s;
-  border: 1px solid azure;
+  font-weight: bold;
 }
 
-#login-btn:active {
-  height: 37px;
-  width: 100px;
-  background-color: transparent;
+@media only screen and (max-width: 380px) {
+  #login {
+    width: 90%;
+  }
+
+  #forget-password {
+    color: rgb(16, 13, 43);
+    font-size: small;
+  }
+
+  #forget-password:hover {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+  }
+
+  #forget-password:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .btn {
+    width: 100px;
+    height: 30px;
+  }
 }
 
 /*?_______________________________________________________Navbar__________________________________________________________________*/
 
-#nav-logo {
+.nav-logo{
+  float: left;
+  margin-left: 25px;
+}
+
+#nav-name{
+  color: #00c8ff;
   position: relative;
-  top: 2.5px;
-  right: 695px;
-  width: 60px;
+  bottom: 7px;
+  float: left;
+  margin-left: 10px;
 }
 
-.navbar {
+.topnav {
+  background-color: #333;
   overflow: hidden;
-  background-color: rgba(51, 51, 51, 0.566);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 65px;
 }
 
-.navbar li {
+/* Style the links inside the navigation bar */
+.topnav a {
   float: right;
-  display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 22px 22px;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  position: relative;
-  top: 0px;
-  margin-right: 35px;
 }
 
-.navbar li:hover {
-  cursor: pointer;
-  background: #ddd;
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
   color: black;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  cursor: pointer;
-  background-color: #111;
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
+/*?_________________________________________________________Forget Password_______________________________________________________________________________________________________*/
 
-/*?_________________________________________________________Forget Password________________________________________________*/
-
-#forgot-pass-container {
-  height: 100vh;
-  background-color: #f907fc;
-  background-image: linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
-}
-
-#forgot-box {
+#forgot-bg {
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/945/841/121/abstract-geometry-polygon-art-blue-wallpaper-ef05823cfeb6ec4b35fcc88281b12434.jpg");
+  background-size: 100%;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-/*!_____________________________________________Forgot-Pass box______________________________________________________________*/
-
-#forgot-pass-box {
-  opacity: 0.8;
-  width: 25%;
-  height: 65vh;
-  border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.413);
-  filter: unset;
+input {
+  border: none;
 }
 
-/*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
-
-#forgot_logo-parent-box {
-  position: relative;
-  top: 15px;
-  display: flex;
-  justify-content: center;
-}
-
-#forgot_logo-box {
-  background-color: white;
-  border-radius: 50%;
-  width: 145px;
-  height: 145px;
-}
-/*!__________________________________________________forgot text__________________________________________________*/
-#forgot-text {
+h1 {
   color: black;
 }
 
-#img-logo_forgot {
-  position: relative;
-  top: 15px;
-  width: 105px;
-  filter: contrast(200%);
-}
-/*!__________________________________________________Form & Input Fields for login_________________________________________________________________*/
-#forgot-form-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-  position: relative;
-  top: 35px;
+p {
+  text-align: center;
 }
 
-.forgot-input-field {
-  background-color: transparent;
-  outline: none;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-color: azure;
-  width: 70%;
-  height: 45px;
-  outline: none;
-  font-size: large;
-  color: azure;
+#forgot {
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  border-radius: 15px;
+  text-align: center;
+  padding: 2%;
+  width: 350px;
+  margin: 0 auto;
+  font-family: Arial;
 }
 
-.forgot-input-field:hover {
-  background: rgba(255, 255, 255, 0.246);
-}
-
-::placeholder {
-  font-size: large;
-  color: rgb(220, 220, 220);
-}
-
-/*!_______________________________________________________________Button for verify_________________________________________________  */
-#forgot-btn {
-  height: 50px;
-  width: 145px;
+#forgot > div > input {
+  margin-bottom: 2%;
+  background: black;
   border: none;
-  border-radius: 35px;
-  background-color: azure;
-  font-size: larger;
+  width: 80%;
+  padding: 0.8em;
+  color: white;
+  border-radius: 5px;
 }
 
-#forgot-btn:hover {
+#forgot > div {
+  color: white;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  border: none;
+  margin-top: 25px;
+  background: #03a9f4;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #6617cb;
+  background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
   cursor: pointer;
-  background-color: transparent;
-  transition: 0.5s;
-  border: 1px solid azure;
+  font-weight: bold;
 }
 
-#forget-back_to_login {
-  color: azure;
-}
+@media only screen and (max-width: 380px) {
+  #forgot {
+    width: 90%;
+  }
 
-#Link-forgot {
-  text-decoration: none;
+  #forget-password {
+    color: rgb(16, 13, 43);
+    font-size: small;
+  }
+
+  #forget-password:hover {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+  }
+
+  #forget-password:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .btn {
+    width: 100px;
+    height: 30px;
+  }
 }
 
 /*?______________________________________________________ENTER NEW PASSWORD___________________________________________ */
 
- /*!_______________________________________________Login and its child_____________________________________________________________________*/
-
-#new_password-container-login {
+#new_pass-bg {
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/146/943/791/monochrome-abstract-digital-art-wallpaper-3920989da19aad3bc6a7980f70a1264d.jpg");
   background-size: 100%;
-  height: 100vh;
-  background-image: url("https://r4.wallpaperflare.com/wallpaper/958/67/630/silhouette-photography-of-eiffel-tower-tour-eiffel-tour-eiffel-wallpaper-87141256ff194aa154d807ba090410e8.jpg");
-  background-size: cover;
-}
-
-#new_password-login-box {
-  background-color: rgba(0, 0, 0, 0.721);
-  width: 100%;
-  height: 100vh;
+  border: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
-/*!_____________________________________________Login box______________________________________________________________*/
-
-#new_password-signIn-box {
-  background-color: #6e72fc;
-  background-image: linear-gradient(175deg, #6e72fc 0%, #ad1deb 74%);
-  opacity: 0.8;
-  width: 25%;
-  height: 53vh;
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  filter: unset;
+input {
+  border: none;
 }
 
-/*!_________________________________________Logo & Logo-parent-box__________________________________________________________*/
-
-#new_password-login_logo-parent-box {
-  position: relative;
-  top: 15px;
-  left: 5px;
-  display: flex;
-  justify-content: center;
-}
-
-#new_password-login_logo-box {
-  background-color: white;
-  border-radius: 50%;
-  width: 145px;
-  height: 145px;
-}
-/*!__________________________________________________Login text__________________________________________________*/
-#new_password-login-text {
-  display: flex;
-  justify-content: center;
+h1 {
   color: black;
 }
 
-#new_password-img-logo_login {
-  position: relative;
-  top: 15px;
-  left: 20px;
-  width: 115px;
-  filter: saturate(3);
-}
-/*!__________________________________________________Form & Input Fields for login_________________________________________________________________*/
-#new_password-login-form-tag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-  position: relative;
-  top: 35px;
+p {
+  text-align: center;
 }
 
-.new_password-login-input-field {
-  background: transparent;
-  outline: none;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-color: azure;
-  width: 60%;
-  height: 25px;
-  outline: none;
+#new_pass {
+  background-color: #fce055;
+  background-image: linear-gradient(319deg, #fce055 0%, #256eff 37%, #46237a 100%);
+  border-radius: 15px;
+  text-align: center;
+  padding: 2%;
+  width: 350px;
+  margin: 0 auto;
+  font-family: Arial;
 }
 
-::placeholder {
-  color: rgb(220, 220, 220);
-}
-
-
-/*!_______________________________________________________________Button for login_________________________________________________  */
-#new_password-login-btn {
-  height: 40px;
-  width: 190px;
+#new_pass > div > input {
+  margin-bottom: 2%;
+  background: black;
   border: none;
-  border-radius: 10px;
-  background-color: azure;
+  width: 80%;
+  padding: 0.8em;
+  color: white;
+  border-radius: 5px;
 }
 
-#new_password-login-btn:hover {
-  cursor: pointer;
-  background-color: transparent;
-  transition: 0.5s;
-  border: 1px solid azure;
-  
+#new_pass > div {
+  color: white;
 }
 
-#new_password-login-btn:active {
+.btn {
+  width: 150px;
   height: 40px;
-  width: 190px;
-  background-color: transparent;
+  border: none;
+  margin-top: 3%;
+  background: #03a9f4;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #42378f;
+  background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 380px) {
+  #new_pass {
+    width: 90%;
+  }
+
+  .btn {
+    width: 100px;
+    height: 30px;
+  }
 }
 
 /*?____________________________________________________________________________________________________________________ */
-#new_password-forget-back_to_login:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-#new_password-instructions {
-  position: relative;
-  left: 110px;
-  flex-direction: column;
-  text-align: justify;
-  color: #05d6d9;
-}
 
 /*?_______________________________________________Mail sent message image____________________________________________________________*/
 
@@ -556,9 +452,8 @@ li a:hover {
 
 /*?_______________________________________________SignIn success image___________________________________________________________________________ */
 
-#signin-success{
+#signin-success {
   width: 100%;
   height: 100vh;
   object-fit: cover;
 }
-

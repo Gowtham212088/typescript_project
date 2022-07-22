@@ -5,21 +5,24 @@ import SignIn from './Components/SignIn';
 import ForgetPassword from './Components/forgetPassword';
 import MailSent from './Reactions/MailSent';
 import EnterNewPassword from './Components/enterNewPassword';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
 import SignInSuccess from './Reactions/sucess';
 import './App.css';
 
 
 function App() {
+
+
   return (
     <div className="App">
-
-
-
-      <Navbar />
+ <Navbar />
 
       <Switch>
-        <Route path="/login">
+
+      <Route path="//">
+          <SignIn />
+        </Route>
+        <Route exact path="/login">
           <SignIn />
         </Route>
         <Route path="/signup">
@@ -34,7 +37,7 @@ function App() {
         <Route path="/signSuccess">
           <SignInSuccess />
         </Route>
-        <Route path="/reset-password/:userid/:token">
+        <Route path="/reset-password/:_id/:token">
           <EnterNewPassword />
         </Route>
       </Switch>
